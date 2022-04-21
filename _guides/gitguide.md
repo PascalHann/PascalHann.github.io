@@ -67,40 +67,30 @@ Falls es nicht jedem_r klar sein sollte, dann kann man sich ein Repository verei
 
 Kommunikation mit Git Servern läuft über SSH, daher müsst ihr bevor ihr euch zu eurem Repository verbinden könnt, euren privaten und öffentlichen SSH Schlüssel konfigurieren. Ihr könnt euch leicht ein solches Key Pair generieren lassen, indem ihr diesen Befehl in der Git Bash ausführt:
 
-```Bash
-$ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
-```
+    $ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 
 Die generierten Keys solltet ihr bei euch lokal im Ordner: **\<Nutzerverzeichnis>/.ssh/** als Dateien **id_rsa** (private key) und **id_rsa.pub** (public key) abspeichern
 
 Nun müsst ihr euren öffentlichen Schlüssel noch am Git Server registrieren damit dieser ihn verwenden kann. Bei GitHub geht das beispielsweise sehr einfach: 
 
-```
-Settings > SSH and GPG Keys > New SSH Key > public Key (inhalt von id_rsa.pub) einfügen.
-```
+    Settings > SSH and GPG Keys > New SSH Key > public Key (inhalt von id_rsa.pub) einfügen.
 
 Die LVs der TU stellen zuzüglich zu ihren Repositories im Regelfall spezielle für euch registrierte Key Pairs zu Verfügung.
 Wie diese beispielsweise für OOP konfiguriert werden (Bei anderen LVs funktioniert es meist analog), erklärt euch @[Luca Eichler](https://gitlab.com/luca.eichler) in seinem [Tutorial](https://gitlab.com/snippets/1902566).
 
 Um nun das Repository zu verwenden, müsst ihr dieses zunächst auf eure Maschine klonen. Dazu dient der Befehl: [git clone](https://git-scm.com/docs/git-clone). In Git Bash könnt ihr folgenden Befehl im Verzeichnis eurer Wahl ausführen, um das Repository am angegebenen Server in dieses Verzeichnis zu kopieren:
 
-```Bash
-$ git clone ssh://XXXXXXXX@g0.complang.tuwien.ac.at/oopXXg
-```
+    $ git clone ssh://XXXXXXXX@g0.complang.tuwien.ac.at/oopXXg
 
 In Gitkraken könnt ihr entweder euren Github, Gitlab, Bitbucket etc. Account verknüpfen und von dort Repositories klonen, oder ebenfalls über eine URL:
 
-```
-File > Clone Repo (Str + N)
-```
+    File > Clone Repo (Str + N)
 
 ![](https://gist.githubusercontent.com/PascalHann/ece75003fcb464b08b8d30eab3142ee6/raw/bb6100133868717b0d3ec2f74ff5e3e969a99089/Gitrkraken_Clone_Repo.png)
 
 In IntelliJ ist der Vorgang ebenfalls sehr intuitiv:
 
-```
-(VCS) > Checkout from Version Control > Git
-```
+    (VCS) > Checkout from Version Control > Git
 
 ![](https://gist.githubusercontent.com/PascalHann/ece75003fcb464b08b8d30eab3142ee6/raw/88a571187e58d09d8bfe4d8944295aff256c0420/IntelliJ_clone.png)
 
@@ -139,9 +129,8 @@ Mit dem aus dem Weg, könnt ihr nun euren ersten Commit erstellen.
 Um sicherzustellen, dass sich in der Zwischenzeit - seit dem Klonen - der Stand am Server nicht verändert hat, führen wir als Erstes einen Pull durch.   
 Der Befehl hierfür ist simpel. Öffnet einfach die Git Bash im Verzeichnis eures Repositorys und gebt Folgendes ein:
 
-```Bash
-$ git pull
-```
+    $ git pull
+
 In Gitkraken gibt es einen eigenen 'Pull' Button dafür und in Intellij können wir entweder die Schaltfläche am rechten oberen Bildschirmrand(STRG - T), oder das Menü **VCS > Git > Pull** verwenden.
 
 ![](https://gist.githubusercontent.com/PascalHann/ece75003fcb464b08b8d30eab3142ee6/raw/e3795d5bdc6cab48fc004094fc615142817cff1c/Gitkraken_Navbar.png)  
@@ -187,20 +176,17 @@ Ihr könnt hierzu manuell auswählen, welche Zeilen der beiden Quellen in den ne
 
 Im aktuellen Beispiel von mir und Lisa würde der Pull eine Meldung wie diese produzieren:
 
-```Bash
-CONFLICT (content): Merge conflict in HelloWorld.java
-Automatic merge failed; fix conflicts and then commit the result.
-```
+    CONFLICT (content): Merge conflict in HelloWorld.java
+    Automatic merge failed; fix conflicts and then commit the result.
+
 Mit `git status` kann man sich auch anzeigen lassen. welche Dateien Konflikte aufweisen und bereinigt werden müssen.  
 Git fügt diesen Dateien an den problematischen Stellen automatisch Markierungen hinzu:
 
-```Java
-<<<<<<< HEAD
-System.out.printLn("Hello World");
-=======
-System.out.printLn("Lisa sagt Hallo");
->>>>>>> Lisas Commit
-```
+    <<<<<<< HEAD
+    System.out.printLn("Hello World");
+    =======
+    System.out.printLn("Lisa sagt Hallo");
+    >>>>>>> Lisas Commit
 
 Der erste Code Block, gekennzeichnet durch HEAD bis zur Trennlinie, stammt aus meinen Änderungen, während der zweite Block von Lisas Commit stammt.  
 Ich entscheide, dass Lisas Code an dieser Stelle besser geeignet ist und lösche daher meine Zeile sowie die von Git eingefügten Marker aus HelloWorld.java.  
@@ -213,33 +199,25 @@ Damit sich Lisa und ich nicht ständig in die Quere kommen und viel Zeit mit Mer
 Ohne Argumente kann ich mir damit alle **lokalen** Branches in meinem Repository anzeigen lassen. Mit dem Argument `-r` kann ich mir die Branches am Server und mit `-a` sowohl als auch anzeigen lassen.  
 Aktuell gibt es nur den Master. Mit  
 
-```Bash
-$ git branch pasci_branch
-```
+    $ git branch pasci_branch
+
 erstelle ich den neuen **lokalen** Branch 'pasci_branch' mit dem aktuellen Commit des Branches, auf dem ich mich gerade befinde, also des Masters, als Ausgang.  
 Mit dem Befehl [git checkout](https://git-scm.com/docs/git-checkout) oder [git switch](https://git-scm.com/docs/git-switch) wechsle ich nun zu meinem neuen Branch:
 
-```Bash
-$ git checkout pasci_branch
-```
+    $ git checkout pasci_branch
+
 Damit meine Gruppenmitglieder diesen Branch auch am Server sehen können, führe ich einen push durch, lege dabei einen entsprechenden Branch am Server an und konfiguriere meinen **lokalen** Branch dazu, auf diesen neuen Branch am Server zu pushen bzw. davon zu pullen. Man kann in so einem Fall den Branch am Server auch als '**upstream**' vom lokalen Branch bezeichnen:
 
-```Bash
-$ git push --set-upstream origin pasci_branch
-```
+    $ git push --set-upstream origin pasci_branch
 
 Nun nehme ich Änderungen auf diesem neuen Branch vor. Ich überarbeite HelloWorld.java erneut. Sobald ich zufrieden bin committe ich meine Änderungen und pushe sie auch auf den pasci_branch am Server.  
 Nun bittet mich Lisa meine Änderungen in den Master zu mergen damit sie auf diese aufbauen kann. Hierzu verwende ich den Befehl [git merge](https://git-scm.com/docs/git-merge). Zuerst muss ich in den Branch wechseln in den ich mergen möchte:
 
-```Bash
-$ git checkout master
-```
+    $ git checkout master
 
 Nun merge ich meinen **lokalen** Branch pasci_branch in meinen **lokalen** Master:
 
-```Bash
-git merge pasci_branch
-```
+    git merge pasci_branch
 
 Wenn möglich führt Git den Merge automatisch durch und erstellt einen Merge Commit, oder im Falle eines Merge Konflikts müssen wir diesen selbst, so wie bereits besprochen, manuell erstellen.  
 Damit dieser Merge nun auch am Server stattfindet, müssen wir den Merge Commit nun noch mit einem Push auf den Server schieben.
