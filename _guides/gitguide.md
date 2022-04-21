@@ -2,6 +2,7 @@
 title: "Git beginners guide"
 collection: guides
 permalink: /guides/git-beginners-guide
+level: beginner
 ---
 
 This is a beginners guide for git. I originally wrote it for students at the technical university Vienna and migrated it from [here](https://gist.github.com/PascalHann/ece75003fcb464b08b8d30eab3142ee6#file-gitbeginnerguide-md), that is why it is written in german.
