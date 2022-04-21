@@ -35,7 +35,7 @@ layout: default
         {% endif %}
         
         {% if page.collection == 'guides' %}
-          <p> {{ page.level }} </p>
+          <p> Level: {{ page.level }} </p>
         {% elsif page.venue and page.date %}
           <p>Published in {{ page.date | default: "1900-01-01" | date: "%Y" }} </p>
         {% elsif page.date %}

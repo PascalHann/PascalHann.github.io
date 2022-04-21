@@ -39,7 +39,7 @@
     {% endif %}
 
         {% if post.collection == 'guides' %}
-          <p> {{ post.level }} </p>
+          <p> Level: {{ post.level }} </p>
         {% elsif post.collection == 'publications' %}
           <p>Published in {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
         {% elsif post.date %}
