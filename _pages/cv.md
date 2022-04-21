@@ -11,49 +11,44 @@ redirect_from:
 
 Education
 ======
-* B.S. in GitHub, GitHub University, 2012
-* M.S. in Jekyll, GitHub University, 2014
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
+* Matura | BG/BRG/BORG Kurzwiese Eisenstadt, 2015
+  * VWA Topic: "Programmierung im dreidimensionalen Raum mit C++ und OpenGL"
+* BSC media computer science and visual computing, Technical University Vienna, 2016 - 2022
+  * Bachelor Thesis: "Incremental Updates of Path-Traced Scenes during Editing"
 
 Work experience
 ======
-* Summer 2015: Research Assistant
-  * Github University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
-
-* Fall 2015: Research Assistant
-  * Github University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+* Jul 2015 - Mar 2016: Technical Support
+  * Red Cross Burgenland
+  * Duties included: Solving technical Issues of different Users, Maintaining of Windows servers and desktop clients
+* Jul 2018 - Dez 2021: Software Engineer
+  * Accenture Technology Solutions GMBH
+  * Duties included: Modernizing large client software, Fullstack Development - Frontend, Service and Backend
+  * Specialised in Java Ecosystem
+* Jan 2022 - Jun 2022: Software Engineer
+  * Sozialversicherungsanstalt der Selbständigen (SVS)
+  * Experience in the austrian public healthcare and insurance domain
+  * Specialised in Java Ecosystem
   
 Skills
 ======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+* Java EE
+* JavaScript
+* Java Spring
+* Maven
+* Jenkins
+* JBoss
+* REST (Testing API with SoapUI and Postman)
+* C++
+* OpenGL
+* Scrum
+* Atlassian Jira and Confluence
+* Git
+* German, English and French
+
 
 Publications
 ======
   <ul>{% for post in site.publications %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
-  
-Talks
-======
-  <ul>{% for post in site.talks %}
-    {% include archive-single-talk-cv.html %}
-  {% endfor %}</ul>
-  
-Teaching
-======
-  <ul>{% for post in site.teaching %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
