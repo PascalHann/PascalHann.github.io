@@ -14,7 +14,7 @@ In this work I present a novel adaptive sampling algorithm for 3D editing softwa
 
 [Download paper here](https://www.cg.tuwien.ac.at/research/publications/2022/HANN_2022_IPT/HANN_2022_IPT-thesis.pdf)
 
-Bibtex:
+**Bibtex:**
 
     @bachelorsthesis{HANN_2022_IPT,
     title =      "Incremental Updates of Path-Traced Scenes during Editing",

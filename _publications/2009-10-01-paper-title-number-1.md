@@ -11,5 +11,3 @@ citation: 'Pascal Hann, Hann. (2019). &quot;Reflections in Real Time Application
 A state of the art report about algorithms for computing reflections in real time applications.
 
 [Download paper here](http://pascalhann.github.io/files/Reflections_in_Real_Time_Applications.pdf)
-
-Recommended citation: Pascal Hann, Hann. (2019). "Reflections in Real Time Applications"
