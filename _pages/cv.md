@@ -11,7 +11,7 @@ redirect_from:
 
 Education
 ======
-* Matura | BG/BRG/BORG Kurzwiese Eisenstadt, 2015
+* Matura BG/BRG/BORG Kurzwiese Eisenstadt, 2015
   * VWA Topic: "Programmierung im dreidimensionalen Raum mit C++ und OpenGL"
 * BSC media computer science and visual computing, Technical University Vienna, 2016 - 2022
   * Bachelor Thesis: "Incremental Updates of Path-Traced Scenes during Editing"
