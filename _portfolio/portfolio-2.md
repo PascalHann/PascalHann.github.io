@@ -1,6 +1,6 @@
 ---
 title: "PeacefulPlayerRepacified"
-excerpt: "A Minecraft bukkit server plugin"
+excerpt: "A Minecraft bukkit server plugin <br/><img src='/images/PPR-Icon.png'>"
 collection: portfolio
 ---
 
