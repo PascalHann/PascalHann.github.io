@@ -29,21 +29,33 @@ Work experience
   * Sozialversicherungsanstalt der Selbständigen (SVS)
   * Experience in the austrian public healthcare and insurance domain
   * Specialised in Java Ecosystem
+* Since Jul 2022: It Specialist Development - Backend Java Developer
+  * REWE International AG
+  * Specialised in the Spring Ecosystem
   
 Skills
 ======
 * Java EE
-* JavaScript
-* Java Spring
+* Spring
 * Maven
 * Jenkins
-* JBoss
 * REST (Testing API with SoapUI and Postman)
+* JavaScript
+* Typescript
+* Jekyll
+* Html
+* Css
+* JUnit
+* Mapstruct
+* Google Cloud Platfrom (GCP)
+* Kubernetes
 * C++
 * OpenGL
 * Scrum
 * Atlassian Jira and Confluence
 * Git
+* Gitlab
+* Github
 * German, English and French
 
 
